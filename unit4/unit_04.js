@@ -66,7 +66,8 @@ document.querySelector('.b-5').onclick = f5;
 //Создайте input(hidden).i-6 и button.b-6 - при нажатии на кнопку выводите value из input в div.out-6
 
 function f6() {
-    c
+    let input = document.querySelector('.i-6');
+    let div = document.querySelector('.out-6');
     div.innerHTML = input.value;
 }
 
