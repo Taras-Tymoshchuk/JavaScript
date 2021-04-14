@@ -217,16 +217,14 @@ document.querySelector('.b-10').onclick = t10;
 
 
 function t11() {
-let div = document.querySelectorAll('.div-11');
+let elem = document.querySelectorAll('.div-11');
 let out11 = document.querySelector('.out-11');
-
-let out = ' ';
-for(let i = 0; i < div.length; i++){
-   out += div[i].outerHTML;
+console.log(elem)
+let out = '  ';
+for(let i = 0; i < elem.length; i++){
+   out += elem[i].innerText + " " ; // в Node не к тому елементу обратился))))
 }
 out11.innerHTML = out;
-
-
 }
 
 document.querySelector('.b-11').onclick = t11;
