@@ -10,7 +10,8 @@ let out1 = document.querySelector('.out-1');
 let out = '';
  for( let i = 0; i<3 ; i++){
     for(let k = 0 ; k <3 ; k++){
-       out += "*";
+       out += '***';
+       break;
     }
     out += '_';
  }
@@ -34,10 +35,12 @@ function t2() {
    let out2 = document.querySelector('.out-2');
    let out = '';
     for( let i = 1; i <=3 ; i++){
+      out += `${i}<br>`;
+
        for(let k = 1 ; k <=1 ; k++){
-          out += `${i}<br>`;
+         out += '*_*_*_<br>';
        }
-       out += '*_*_*_<br>';
+       
     }
     out2.innerHTML += out;// в задании наоборот!!!!!!!!!!
 }
@@ -58,10 +61,10 @@ function t3() {
    let out3 = document.querySelector('.out-3');
    let out = '';
     for( let i = 1; i <=4 ; i++){
+      out += '<br>';
        for(let k = 1 ; k <=3 ; k++){
           out += '*_ ';
        }
-       out += '<br>';
     }
     out3.innerHTML += out;
 }
@@ -77,8 +80,10 @@ function t4() {
    let out4 = document.querySelector('.out-4');
    let out = '';
     for( let i = 1; i <=3 ; i++){
-       for(let k = 1 ; k <=1 ; k++){
-          out += `${i}_1 2 3 4 5 `;
+      out+= `${i}_`;
+
+       for(let k = 1 ; k <=5 ; k++){
+          out+= `${k} `;
        }
     }
     out4.innerHTML += out;
@@ -182,12 +187,12 @@ document.querySelector('.b-7').onclick = t7;
 // <p>Внешний цикл выводит перенос строки br. Вложенный цикл рисует звездочки. </p>
 function t8() {
    let out8 = document.querySelector('.out-8');
-   let out = '';
+   let out = ' ';
    for(let i = 0; i<=5; i++){
+      out+= '<br>';
       for(let k = 5; k > i; k--){
          out+= '* ';
       }
-      out+= '<br>';
    }
    out8.innerHTML = out;
 }
