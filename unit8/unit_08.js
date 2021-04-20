@@ -88,7 +88,12 @@ function t5() {
    let out = ' ';
    let p = 1;
    while( p <= 17){
-      out+= p + '_*';
+      if( p % 2 === 0){
+      out += p +'_**';
+   }
+   else{
+      out += p + '_*';
+   }
       p++;
    }
    out5.innerHTML = out;
