@@ -286,7 +286,7 @@ let a15 = [
 ];
 
 function f15() {
-    let max = a15[0];
+    let max = a15[0].length;
     for(let i=0; i < a15.length; i++){
         if(a15[i].length > max){
             max = a15[i].length;
