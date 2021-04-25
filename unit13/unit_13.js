@@ -78,12 +78,12 @@ let a4 = {
     "mix": "mix"
 };
 function f4() {
-let out = '';
-for (key in a4){
-    out+= key + ' '+ a4[key] + ' <br>';
-}
-    return out;
-}
+    let out = '';
+        for (key in a4){
+        out+= key + ' '+ a4[key] + ' <br>';
+    }
+        return out;
+    }
 
 document.querySelector('.b-4').onclick = () => {
     document.querySelector('.out-4').innerHTML = f4();
@@ -121,10 +121,10 @@ let a6 = {
 };
 
 function f6() {
-let i61 = document.querySelector('.i-61').value;
-let i62 = document.querySelector('.i-62').value;
-a6[i61]= i62;
-f5(a6, '.out-6');
+    let i61 = document.querySelector('.i-61').value;
+    let i62 = document.querySelector('.i-62').value;
+    a6[i61]= i62;
+    f5(a6, '.out-6');
 
 }
 
@@ -257,7 +257,12 @@ let a12 = {
 };
 
 function f12() {
+    let input = document.querySelector('.i-12').value;
+    for (let key in a12) {
+        if (a12[key] == input ) delete a12[key];
 
+    }
+    f5(a12,'.out-12');
 }
 
 document.querySelector('.b-12').onclick = f12;
@@ -273,7 +278,12 @@ let a13 = {
 };
 
 function f13() {
-
+    let sum = 0;
+    for (let key in a13) {
+        if (typeof a13[key] == 'number' ) sum += a13[key];
+    }
+    
+    document.querySelector('.out-13').innerHTML = sum;
 }
 
 document.querySelector('.b-13').onclick = f13;
@@ -291,6 +301,11 @@ let a14 = {
 
 function f14() {
 
+    let out = '';
+    for ( key in a14) {
+        out += a14[key][0] + ' ';
+    }
+    document.querySelector('.out-14').innerHTML = out;
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -308,7 +323,13 @@ let a15 = {
 };
 
 function f15() {
-
+    let out = '';
+    for (let key in a15) {
+        for (let i = 0; i < a15[key].length; i++) {
+            out += a15[key][i]+' ';
+        }
+    }
+    document.querySelector('.out-15').innerHTML = out;
 }
 
 document.querySelector('.b-15').onclick = f15;
@@ -332,7 +353,12 @@ let a16 = {
 }
 
 function f16() {
+    let out = '';
+    for(key in a16)
+    out+= a16[key].name + ' ';
+    // out+= a16[key]["name"] + ' '; //если ключ из двух слов. это для себя
 
+document.querySelector('.out-16').innerHTML = out;
 }
 
 document.querySelector('.b-16').onclick = f16;
@@ -357,7 +383,13 @@ let a17 = {
 }
 
 function f17() {
+    let out = '';
+    for(key in a17)
+    if(a17[key].age > 30)
+    out+= a17[key].name + ' ';
+    
 
+document.querySelector('.out-17').innerHTML = out;
 }
 
 document.querySelector('.b-17').onclick = f17;
@@ -372,8 +404,18 @@ let a18 = {
 }
 
 function f18() {
+    let input = document.querySelector('.i-18').value;
+    let out = '';
+    for(key in a18)
+     if(key == input){
+         out+= a18[key].join(' ');
+         break;
+     }
+    
 
+document.querySelector('.out-18').innerHTML = out;
 }
+document.querySelector('.b-18').onclick = f18;
 
 // Task 19
 // При нажатии b-19 выполняете функцию f19. Функция должна в out-19 вывести цвет ветки станции которую пользователь ввел в i-19. Пользователь может вводить текст как с большой, так и с маленькой буквы. Если ветка не найдена - выводите пустую строку.
@@ -386,7 +428,16 @@ let a19 = {
 }
 
 function f19() {
-
+    let input = document.querySelector('.i-19').value;
+    let out = '';
+    for(key in a19){
+        for(let i = 0; i < a19[key].length; i++){
+            if(input.toLowerCase() == a19[key][i].toLowerCase()){
+                out+= key;
+            }
+        }
+    }
+document.querySelector('.out-19').innerHTML = out;
 }
 
 document.querySelector('.b-19').onclick = f19;
@@ -395,13 +446,35 @@ document.querySelector('.b-19').onclick = f19;
 // При нажатии b-20 выполняете функцию f20. Функция должна в out-20 вывести название станции которые содержат переход на другую ветку. Такие станции маркируются 2. Вывод через пробел
 
 let a20 = {
-    "red": [['Akademmistechko', 1], ['Nyvky', 0], ['Universytet', 3], ['Lisova', 1]],
-    "blue": [['Minska', 1], ['Obolon', 0], ['Pochaina', 2], ['Holosiivska', 0]],
-    "green": [['Syrets', 1], ['Zoloti Vorota', 2], ['Klovska', 0], ['Vidubichi', 1]],
+    "red": [
+        ['Akademmistechko', 1], 
+        ['Nyvky', 0], 
+        ['Universytet', 3], 
+        ['Lisova', 1]],
+    "blue": [
+        ['Minska', 1], 
+        ['Obolon', 0], 
+        ['Pochaina', 2], 
+        ['Holosiivska', 0]
+    ],
+    "green": [
+        ['Syrets', 1], 
+        ['Zoloti Vorota', 2], 
+        ['Klovska', 0], 
+        ['Vidubichi', 1]
+    ],
 }
 
 function f20() {
-
+    let out = '';
+    for( let key in a20){
+        for(let i=0; i<a20[key].length; i++){
+            if(a20[key][i][1] == 2 ){
+                out+= a20[key][i][0] +' ';
+            }
+        }
+    }
+    document.querySelector('.out-20').innerHTML = out;
 }
 
 document.querySelector('.b-20').onclick = f20
