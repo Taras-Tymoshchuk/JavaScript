@@ -259,10 +259,18 @@ document.querySelector('.b-14').onclick = f14;
 let d15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 
 function f15() {
-let inp = document.querySelector('.i-15');
-    if(!d15.includes(inp)){
-        d15.push(+inp.value);
+let inp = +document.querySelector('.i-15').value;
+let res = true;
+ for(let i = 0; i < d15.length; i++){
+    if(inp == d15[i]){
+        res = false;
+        break;
     }
+}
+    if(res){
+     d15.push(inp);
+    }
+    
     showArr('.out-15', d15);
 }
 
