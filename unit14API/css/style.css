@@ -1,0 +1,36 @@
+
+.col{
+   margin: 50px auto;
+   width: 250px;
+   text-align: center;
+   border: 3px solid rgb(255, 123, 47);
+}
+.city-name{
+   font-size: 32px;
+   color: green;
+   
+}
+.temp{
+   font-size: 28px;
+   margin: 0 auto;
+   
+}
+#city{
+   margin: 20px 0px;
+}
+.button-primary{
+   border: 2px solid green;
+   color: white;
+   background-color: yellowgreen;
+   width: 100px;
+   height: 30px;
+   margin-bottom: 10px;
+}
+ul{
+   padding-inline-start: 0;
+}
+ul li{
+   list-style: none;
+   margin-bottom: 10px;
+   
+}
