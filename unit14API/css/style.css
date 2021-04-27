@@ -1,49 +1,58 @@
 
 .container{
    margin: 50px auto;
-   width: 250px;
+   width: 500px;
+   height: 700px;
    text-align: center;
    border: 3px solid rgb(9, 15, 104);
-   background-image: linear-gradient(to bottom, #001936, #002855, #003675, #004696, #0055b9, #3c66cb, #5c78dd, #788aef, #a1a5f3, #c4c2f7, #e3e0fb, #ffffff);
+   /* background-image: linear-gradient(to bottom, #001936, #002855, #003675, #004696, #0055b9, #3c66cb, #5c78dd, #788aef, #a1a5f3, #c4c2f7, #e3e0fb, #ffffff); */
+   background-image: url(/JavaScript/unit14API/image/unit14API.zip.jpg);
 }
 
 .city-name{
-   font-size: 32px;
+   font-size: 48px;
    color: rgb(255, 255, 255);
-   letter-spacing: 3px;
+   letter-spacing: 4px;
    font-family: monospace;
 }
 .temp{
-   font-size: 28px;
+   font-size: 48px;
    margin: 0 auto;
    color: rgb(255, 255, 255);
 }
 .weather{
 font-family: cursive;
+font-size: 38px;
 color: lightyellow;
 }
 .line{
-   border: 1px dotted rgb(6, 29, 65);
+   /* border: 2px dotted rgb(6, 29, 65); */
 }
-#city{
+#citys{
    margin: 20px 0px;
+   font-size: 18px;
+}
+.form-control{
+   color: lightyellow;
 }
 .button-primary{
    margin-top: 10px;
    border: none;
    color: white;
    background-color: yellowgreen;
-   width: 100px;
-   height: 30px;
+   width: 150px;
+   height: 40px;
    margin-bottom: 10px;
    cursor: pointer;
    box-shadow: 2px 3px #999;
 }
 ul{
    padding-inline-start: 0;
+   
 }
 ul li{
    list-style: none;
-   margin-bottom: 10px;
+   margin-bottom: 30px;
    font-family: cursive;
+   font-size: 28px;
 }
