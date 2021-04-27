@@ -1,30 +1,43 @@
 
-.col{
+.container{
    margin: 50px auto;
    width: 250px;
    text-align: center;
-   border: 3px solid rgb(255, 123, 47);
+   border: 3px solid rgb(9, 15, 104);
+   background-image: linear-gradient(to bottom, #001936, #002855, #003675, #004696, #0055b9, #3c66cb, #5c78dd, #788aef, #a1a5f3, #c4c2f7, #e3e0fb, #ffffff);
 }
+
 .city-name{
    font-size: 32px;
-   color: green;
-   
+   color: rgb(255, 255, 255);
+   letter-spacing: 3px;
+   font-family: monospace;
 }
 .temp{
    font-size: 28px;
    margin: 0 auto;
-   
+   color: rgb(255, 255, 255);
+}
+.weather{
+font-family: cursive;
+color: lightyellow;
+}
+.line{
+   border: 1px dotted rgb(6, 29, 65);
 }
 #city{
    margin: 20px 0px;
 }
 .button-primary{
-   border: 2px solid green;
+   margin-top: 10px;
+   border: none;
    color: white;
    background-color: yellowgreen;
    width: 100px;
    height: 30px;
    margin-bottom: 10px;
+   cursor: pointer;
+   box-shadow: 2px 3px #999;
 }
 ul{
    padding-inline-start: 0;
@@ -32,5 +45,5 @@ ul{
 ul li{
    list-style: none;
    margin-bottom: 10px;
-   
+   font-family: cursive;
 }
