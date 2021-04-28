@@ -5,8 +5,8 @@
    height: 700px;
    text-align: center;
    border: 3px solid rgb(9, 15, 104);
-   /* background-image: linear-gradient(to bottom, #001936, #002855, #003675, #004696, #0055b9, #3c66cb, #5c78dd, #788aef, #a1a5f3, #c4c2f7, #e3e0fb, #ffffff); */
-   background-image: url(/JavaScript/unit14API/image/unit14API.zip.jpg);
+   background-image: linear-gradient(to bottom, #001936, #002855, #003675, #004696, #0055b9, #3c66cb, #5c78dd, #788aef, #a1a5f3, #c4c2f7, #e3e0fb, #ffffff);
+   
 }
 
 .city-name{
