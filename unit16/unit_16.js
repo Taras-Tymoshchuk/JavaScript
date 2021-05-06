@@ -24,10 +24,10 @@ function f2() {
     let out = '';
     
         for(let i = 0; i < a2.length; i++){
-            out+= `${a2[i].length} ${a2[i]} `;
-            
+            out+= `${i} ${a2[i]} `;
+            // console.log(i)
         }
-        // console.log(out)
+        
     out2.innerHTML = out;
 }
 
@@ -57,7 +57,7 @@ function f4() {
 let divS = document.querySelectorAll('.out-4')
 console.log(divS)
 for(let i =0; i < divS.length; i++){
-    divS[i].innerHTML = 4;
+    divS[i].innerHTML += 4;
     console.log(divS[i])
 }
 }
