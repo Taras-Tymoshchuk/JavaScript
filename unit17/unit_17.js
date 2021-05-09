@@ -116,8 +116,8 @@ let a6 = [3, 14, 15, 92, "6", "5", "hello", 32];
 function t6() {
     a6_res = [];
     a6_res = a6.filter(function(elem){
-        if(+elem > 14){
-            return true
+        if(typeof elem == 'number' && elem >14){
+            return true;
         }
     })
     return a6_res
@@ -171,11 +171,12 @@ document.querySelector('.b-8').onclick = () => {
 let a9 = ['Quantum Break', 'Gears of War 4', 'Mass Effect: Andromeda', 'Far Cry Primal'];
 
 function t9() {
-    a9_res = [];
-    a9_res = a9.forEach(element => {
-        return element.toLowerCase();
+     let a9_res = [];
+     a9.forEach(element => {
+        a9_res.push(element.toLowerCase());
     });
-    return a9_res;
+    a9 = a9_res
+    return a9;
 }
 
 document.querySelector('.b-9').onclick = () => {
